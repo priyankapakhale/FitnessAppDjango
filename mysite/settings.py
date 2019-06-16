@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myapp',
+    'priyanka0304.pythonanywhere.com'
 ]
 
 MIDDLEWARE = [
