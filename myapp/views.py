@@ -25,9 +25,11 @@ def get_user(request):
     email = req['email']
 
     query_set = User.objects.filter(email = email)
+    #query_set = User.objects.get(email = email)
 
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
+    print(data)
     l = list()
     mydata = dict()
     user = dict()
