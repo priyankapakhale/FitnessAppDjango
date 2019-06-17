@@ -11,10 +11,10 @@ from django.views.decorators.cache import never_cache
 @csrf_exempt
 def add_user(request):
     req = request.POST
-    first_name = req['email']
-    email = req['first_name']
+    first_name = req['first_name']
+    email = req['email']
     last_name = req['last_name']
-    
+
     ProfileHelper.addUser(first_name,last_name,email)
     return HttpResponse(json.dumps("User added"), content_type='application/json')
 
@@ -22,7 +22,7 @@ def add_user(request):
 @csrf_exempt
 def get_user(request):
     req = request.POST
-    email_id = req['email']
+    email = req['email']
 
     query_set = User.objects.filter(email = email)
 
