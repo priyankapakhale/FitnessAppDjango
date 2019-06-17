@@ -22,6 +22,6 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('add_user/',views.add_user),
-    url('get_user/',views.get_user),
+    url(r^'add_user/',views.add_user),
+    url(r^'get_user/',views.get_user),
 ]
