@@ -3,6 +3,7 @@ from myapp.models import User
 from django.http.response import JsonResponse
 from django.core import serializers
 import json
+from . import ProfileHelper
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.cache import never_cache
 
