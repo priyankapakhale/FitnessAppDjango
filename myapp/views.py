@@ -28,7 +28,7 @@ def get_user(request):
 
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
-    l = list()
+    l = list(data)
     mydata = dict()
     user = dict()
 
