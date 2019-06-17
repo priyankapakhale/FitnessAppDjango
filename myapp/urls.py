@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from django.conf.urls import url
+
 
 urlpatterns = [
     #path('add_user/',views.add_user, name='add_user'),
