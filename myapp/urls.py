@@ -6,8 +6,8 @@ from django.urls import include, re_path
 
 
 urlpatterns = [
-    re_path(r'^add_user/<slug:first_name,slug:last_name,slug:email>',views.add_user, name='add_user'),
-    re_path(r'^get_user/',views.get_user, name='get_user'),
+    path('add_user/<slug:first_name,slug:last_name,slug:email>',views.add_user),
+    path('get_user/<slug:email>',views.get_user),
 
     #url(r^'add_user/',views.add_user),
     #url(r^'get_user/',views.get_user),
