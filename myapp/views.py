@@ -26,9 +26,9 @@ def add_user(request, email):
 @csrf_exempt
 def get_user(request):
     req = request.POST
-    email_id = req['email_id']
+    email_id = req['email']
 
-    query_set = User.objects.filter(email_id = email_id)
+    query_set = User.objects.filter(email = email)
 
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
