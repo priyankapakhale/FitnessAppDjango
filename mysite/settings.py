@@ -82,6 +82,7 @@ DATABASES = {
         'USER': 'py13',
         'PASSWORD': 'fitnessapp',
         'HOST': 'py13.mysql.pythonanywhere-services.com',
+
     }
 }
 

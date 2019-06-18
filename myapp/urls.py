@@ -6,8 +6,9 @@ from django.urls import include, re_path
 
 
 urlpatterns = [
-    path('add_user/<str:email>',views.add_user, name="add_user"),
-    path('get_user/<str:email>',views.get_user, name="get_user"),
+    #re_path(r’^[0-9]+)$’, views.detail, name=’detail’)
+    path('add_user/',views.add_user, {'email': email}),
+    path('get_user/',views.get_user, {'email': email}),
 
 
 
