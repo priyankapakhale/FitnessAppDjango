@@ -8,6 +8,9 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.cache import never_cache
 
 # Create your views here.
+def index(request):
+    return HttpResponse("Hello, world. You're at the mediator index.")
+
 @never_cache
 @csrf_exempt
 def add_user(request):

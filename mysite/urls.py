@@ -21,6 +21,7 @@ from myapp import views
 
 
 urlpatterns = [
+
     url(r'^admin/', admin.site.urls),
     url(r'^add_user/',views.add_user),
     url(r'^get_user/',views.get_user),
