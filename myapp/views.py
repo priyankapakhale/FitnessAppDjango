@@ -14,6 +14,7 @@ def index(request):
 @never_cache
 @csrf_exempt
 def add_user(request):
+    print("I am in add request")
     req = request.POST
     first_name = req['first_name']
     last_name = req['last_name']
@@ -25,6 +26,7 @@ def add_user(request):
 @never_cache
 @csrf_exempt
 def get_user(request):
+    print("I am in get user")
     req = request.POST
     email = req['email']
 
