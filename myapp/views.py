@@ -22,9 +22,9 @@ def add_user(request):
 @never_cache
 @csrf_exempt
 def get_user(request):
-    req = request['POST']
+    req = request.POST
     email = req['email']
-    
+
     query_set = User.objects.filter(email = email)
     #query_set = User.objects.get(email = email)
 
