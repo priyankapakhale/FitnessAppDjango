@@ -13,7 +13,7 @@ def index(request):
 
 @never_cache
 @csrf_exempt
-def add_user(request):
+def add_user(request, *args, **kwargs):
     print("I am in add request")
     req = request.POST
     first_name = req['first_name']
