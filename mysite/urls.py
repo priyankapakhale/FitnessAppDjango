@@ -17,11 +17,12 @@ import myapp
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
+from myapp import views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('myapp.urls')),
-
+    url(r'^admin/', admin.site.urls),
+    url(r'^add_user/',views.add_user),
+    url(r'^get_user/',views.get_user),
     #path('admin/', include(admin.site.urls)),
     ]
