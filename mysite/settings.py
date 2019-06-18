@@ -78,9 +78,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'py13$fitnessappdb',
+        'NAME': 'py13$fitnessdb2',
         'USER': 'py13',
-        'PASSWORD': 'fitnessapp',
+        'PASSWORD': 'fitnessdb2',
         'HOST': 'py13.mysql.pythonanywhere-services.com',
 
     }
