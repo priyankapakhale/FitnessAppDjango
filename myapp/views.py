@@ -10,7 +10,7 @@ from django.views.decorators.cache import never_cache
 # Create your views here.
 @never_cache
 @csrf_exempt
-def add_user(request,email):
+def add_user(request, email):
     req = request.POST
     first_name = req['first_name']
     last_name = req['last_name']
@@ -21,10 +21,7 @@ def add_user(request,email):
 @never_cache
 @csrf_exempt
 def get_user(request, email):
-    req = request.POST
-
-    email = request['email']
-
+    
     query_set = User.objects.filter(email = email)
     #query_set = User.objects.get(email = email)
 
