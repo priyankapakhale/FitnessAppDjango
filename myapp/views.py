@@ -32,11 +32,10 @@ def add_user(request):
 def get_user(request):
     print("I am in get user")
     req = request.POST
-    email_id = req.get('email_id')
-    #email_id = req['email_id']
 
-    query_set = User.objects.filter(email_id = email_id)
-    #query_set = User.objects.get(email_id = email_id)
+    email_id = req['email_id']
+
+    query_set = User.objects.get(email_id = email_id)
 
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
