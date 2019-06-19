@@ -46,7 +46,7 @@ def get_user(request):
     id = data['pk']
     print(id)
 
-    mydata['User'] = d['fields']
+    mydata['User'] = data['fields']
     mydata['id'] = id
     print(mydata)
 
