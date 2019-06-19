@@ -40,18 +40,12 @@ def get_user(request):
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
     print(data)
-    l = list()
     mydata = dict()
-    user = dict()
-
-    id = data[0]['pk']
+    
+    id = data['pk']
     print(id)
-    for d in data:
-        x = d['fields']
-        l.append(x)
-    temp = dict()
 
-    mydata['User'] = l[0]
+    mydata['User'] = d['fields']
     mydata['id'] = id
     print(mydata)
 
