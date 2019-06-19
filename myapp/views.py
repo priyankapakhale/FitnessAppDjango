@@ -40,6 +40,7 @@ def get_user(request):
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
     print(data)
+    data = data[0]
     mydata = dict()
 
     id = data['pk']
