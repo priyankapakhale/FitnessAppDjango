@@ -34,14 +34,14 @@ def get_user(request):
     req = request.POST
 
     email_id = req['email_id']
-
+    print(email_id)
     query_set = User.objects.get(email_id = email_id)
 
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
     print(data)
     mydata = dict()
-    
+
     id = data['pk']
     print(id)
 
