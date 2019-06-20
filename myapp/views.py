@@ -29,6 +29,31 @@ def add_user(request):
 
 @never_cache
 @csrf_exempt
+def add_user_details(request):
+    print("In add user details")
+    req = request.POST
+    email_id = req['email_id']
+    age = req['age']
+    weight = req['weight']
+    height = req['height']
+    gender = req['gender']
+    goal_weight = 50.0
+    bmi = 0.0
+
+    #fetching user from email_id
+    query_set = User.objects.filter(email_id = email_id)
+    json_data = serializers.serialize('json', query_set)
+    data = json.loads(json_data)
+    print(data)
+    data = data[0]
+    user = data['fields']
+
+    ProfileHelper.addUser(user, age, gender, weight, height, bmi, goal_weight)
+    return HttpResponse(json.dumps("User Details added"), content_type='application/json')
+
+
+@never_cache
+@csrf_exempt
 def get_user(request):
     print("I am in get user")
     req = request.POST
