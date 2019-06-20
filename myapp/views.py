@@ -40,6 +40,8 @@ def add_user_details(request):
     goal_weight = 50.0
     bmi = 0.0
 
+    print("fetched gender = ",gender)
+
     #fetching user from email_id
     query_set = User.objects.filter(email_id = email_id)
     json_data = serializers.serialize('json', query_set)
