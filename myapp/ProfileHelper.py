@@ -1,4 +1,4 @@
-from myapp.models import User, UserDetails, FoodInfo
+from myapp.models import User, UserDetails
 
 def addUser(first_name,last_name,email_id):
     u = User(first_name = first_name,
@@ -8,16 +8,8 @@ def addUser(first_name,last_name,email_id):
     u.save()
 
 def addUserDetails(user, age, gender, weight, height, bmi, goal_weight):
-    print('adding user details')
-    print("user = ",user)
-    print("age = ",age)
-    print("weight = ",weight)
-    print("height = ",height)
-    print("bmi = ",bmi)
-    print("goal_weight = ",goal_weight)
 
-    id = User.objects.filter(user['pk'])
-    u = UserDetails(user = id[0],
+    u = UserDetails(user = user,
         age = age,
         gender = gender,
         weight = weight,
