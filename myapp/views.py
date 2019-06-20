@@ -36,6 +36,7 @@ def add_user_details(request):
     age = req['age']
     weight = req['weight']
     height = req['height']
+    print("here")
     gender = req['gender']
     goal_weight = 50.0
     bmi = 0.0
