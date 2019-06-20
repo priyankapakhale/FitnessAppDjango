@@ -18,7 +18,7 @@ class User(models.Model):
 class UserDetails(models.Model):
     user = models.ForeignKey(User, on_delete = models.CASCADE)
     age = models.IntegerField()
-    gender = models.CharField(max_length=1)
+    gender = models.CharField(max_length=10)
     weight = models.FloatField() #weight in kg
     height = models.FloatField() #height in cm
     bmi = models.FloatField()
