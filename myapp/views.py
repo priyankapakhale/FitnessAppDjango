@@ -47,7 +47,7 @@ def add_user_details(request):
     query_set = User.objects.filter(email_id = email_id)
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
-    print(data)
+    print("data = ",data)
     data = data[0]
     user = data['fields']
     if gender.lower() == 'female':
