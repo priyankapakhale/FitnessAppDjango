@@ -42,7 +42,7 @@ def add_user_details(request):
     bmi = 0.0
 
     print("fetched gender = ",gender)
-    print("fetched email = ",email_id)
+    print("fetched email = ", email_id)
     #fetching user from email_id
     query_set = User.objects.filter(email_id = email_id)
     json_data = serializers.serialize('json', query_set)

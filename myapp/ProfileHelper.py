@@ -1,4 +1,4 @@
-from myapp.models import User
+from myapp.models import User, UserDetails, FoodInfo
 
 def addUser(first_name,last_name,email_id):
     u = User(first_name = first_name,
