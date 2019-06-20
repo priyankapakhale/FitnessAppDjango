@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from myapp.models import User, UserDetails
 from django.http.response import JsonResponse
 from django.core import serializers
 import json
@@ -50,7 +49,7 @@ def add_user_details(request):
     print("data = ",data)
 
     user = data[0]
-    
+
     ProfileHelper.addUserDetails(user, age, gender, weight, height, bmi, goal_weight)
     return HttpResponse(json.dumps("User Details added"), content_type='application/json')
 
