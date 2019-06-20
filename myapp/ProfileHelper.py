@@ -7,9 +7,10 @@ def addUser(first_name,last_name,email_id):
              )
     u.save()
 
-def addUserDetails(user, age, gender, weight, height, bmi, goal_weight):
+def addUserDetails(user_id, age, gender, weight, height, bmi, goal_weight):
+    user = User.objects.filter(id = user_id)
 
-    u = UserDetails(user = user,
+    u = UserDetails(user = user[0],
         age = age,
         gender = gender,
         weight = weight,

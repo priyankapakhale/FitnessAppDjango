@@ -45,14 +45,22 @@ def add_user_details(request):
     print("fetched email = ", email_id)
     #fetching user from email_id
     query_set = User.objects.filter(email_id = email_id)
+
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
-    print("data = ",data)
+    print(data)
+    data = data[0]
+    mydata = dict()
 
-    user = data[0]
+    id = data['pk']
+    print(id)
+
+    mydata['user'] = data['fields']
+    mydata['id'] = id
+    print(mydata)
 
 
-    ProfileHelper.addUserDetails(user, age, gender, weight, height, bmi, goal_weight)
+    ProfileHelper.addUserDetails(id, age, gender, weight, height, bmi, goal_weight)
     return HttpResponse(json.dumps("User Details added"), content_type='application/json')
 
 
