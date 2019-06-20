@@ -8,6 +8,7 @@ def addUser(first_name,last_name,email_id):
     u.save()
 
 def addUserDetails(user, age, gender, weight, height, bmi, goal_weight):
+    print('adding user details')
     u = UserDetails(user = user,
                     age = age,
                     gender = gender,
