@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from myapp.models import User, UserDetails
 from django.http.response import JsonResponse
 from django.core import serializers
 import json
