@@ -48,8 +48,8 @@ def add_user_details(request):
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
     print("data = ",data)
-    data = data[0]
-    user = data['fields']
+
+    user = data[0]
     if gender.lower() == 'female':
         gender = 'F'
     else:
