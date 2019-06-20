@@ -15,7 +15,9 @@ def addUserDetails(user, age, gender, weight, height, bmi, goal_weight):
     print("height = ",height)
     print("bmi = ",bmi)
     print("goal_weight = ",goal_weight)
-    u = UserDetails(user = user,
+
+    id = User.objects.filter(user['pk'])
+    u = UserDetails(user = id[0],
         age = age,
         gender = gender,
         weight = weight,
