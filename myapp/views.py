@@ -47,6 +47,10 @@ def add_user_details(request):
     print(data)
     data = data[0]
     user = data['fields']
+    if gender.lower() == 'female':
+        gender = 'F'
+    else:
+        gender = 'M'
 
     ProfileHelper.addUser(user, age, gender, weight, height, bmi, goal_weight)
     return HttpResponse(json.dumps("User Details added"), content_type='application/json')
