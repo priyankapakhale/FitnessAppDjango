@@ -55,7 +55,7 @@ def add_user_details(request):
     else:
         gender = 'M'
 
-    ProfileHelper.addUser(user, age, gender, weight, height, bmi, goal_weight)
+    ProfileHelper.addUserDetails(user, age, gender, weight, height, bmi, goal_weight)
     return HttpResponse(json.dumps("User Details added"), content_type='application/json')
 
 
