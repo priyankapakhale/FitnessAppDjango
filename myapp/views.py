@@ -20,7 +20,7 @@ def add_user(request):
     name = req['name']
     email_id = req['email_id']
 
-
+    print("fetched name = ",name)
     ProfileHelper.addUser(name,email_id)
     return HttpResponse(json.dumps("User added"), content_type='application/json')
 
