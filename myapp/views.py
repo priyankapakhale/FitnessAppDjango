@@ -20,8 +20,15 @@ def add_user(request):
     name = req['name']
     email_id = req['email_id']
 
-    print("fetched name = ",name)
-    ProfileHelper.addUser(name,email_id)
+    #check if user email_id exists
+    query_set = User.objects.filter(email_id = email_id)
+    json_data = serializers.serialize('json', query_set)
+    data = json.loads(json_data)
+
+    if data = []:
+        print("fetched name = ",name)
+        ProfileHelper.addUser(name,email_id)
+    #else decide what to do
     return HttpResponse(json.dumps("User added"), content_type='application/json')
 
 @never_cache
