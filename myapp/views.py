@@ -25,7 +25,7 @@ def add_user(request):
     json_data = serializers.serialize('json', query_set)
     data = json.loads(json_data)
 
-    if data = []:
+    if data == []:
         print("fetched name = ",name)
         ProfileHelper.addUser(name,email_id)
     #else decide what to do
