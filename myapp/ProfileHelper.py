@@ -1,8 +1,7 @@
 from myapp.models import User, UserDetails
 
-def addUser(first_name,last_name,email_id):
-    u = User(first_name = first_name,
-            last_name = last_name,
+def addUser(name,email_id):
+    u = User(name = name,
             email_id = email_id
              )
     u.save()
